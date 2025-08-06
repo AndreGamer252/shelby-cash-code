@@ -8,23 +8,20 @@ const EbookHeader = () => {
       </Badge>
       
       <h1 className="font-shelby text-4xl md:text-6xl font-bold text-primary leading-tight">
-        O MANUAL SHELBY
+        COMO CONSEGUIR
         <br />
-        <span className="text-shelby-green-light">DO DINHEIRO ESPERTO</span>
+        <span className="text-shelby-green-light">CLIENTES PARA EMPRÉSTIMO</span>
       </h1>
       
       <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-        Como emprestar dinheiro com inteligência, evitar calotes e dominar o jogo financeiro das ruas
+        Um Guia Prático e Direto
       </p>
       
       <div className="relative max-w-2xl mx-auto">
         <div className="bg-card border border-primary/20 rounded-lg p-6 shadow-elegant">
           <blockquote className="text-lg md:text-xl italic text-foreground font-medium">
-            "Se você controla o crédito... você controla o bairro."
+            "No fim do dia, pessoas fazem negócio com pessoas em quem confiam. Seja essa pessoa."
           </blockquote>
-          <cite className="block mt-3 text-primary font-semibold">
-            — Thomas Shelby (ou quase isso)
-          </cite>
         </div>
       </div>
     </div>
