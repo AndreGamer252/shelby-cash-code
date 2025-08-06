@@ -2,39 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Shelby-inspired design system with green and black theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 6.5%;
+    --foreground: 120 20% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 120 20% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 120 20% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 6.5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 120 15% 80%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 120 10% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 60% 25%;
+    --accent-foreground: 120 20% 90%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 142 76% 36%;
+
+    /* Shelby-specific design tokens */
+    --shelby-green: 142 76% 36%;
+    --shelby-green-dark: 142 60% 25%;
+    --shelby-green-light: 142 76% 45%;
+    --shelby-black: 0 0% 6.5%;
+    --shelby-black-light: 0 0% 12%;
+    --shelby-gold: 45 100% 70%;
+    
+    /* Gradients */
+    --gradient-shelby: linear-gradient(135deg, hsl(var(--shelby-black)) 0%, hsl(var(--shelby-green-dark)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--shelby-green)) 0%, hsl(var(--shelby-green-light)) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 25px 50px -12px hsl(var(--shelby-black) / 0.8);
+    --shadow-green-glow: 0 0 30px hsl(var(--shelby-green) / 0.3);
+    
+    /* Typography */
+    --font-shelby: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
 
     --radius: 0.5rem;
 
@@ -101,5 +121,44 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  .font-shelby {
+    font-family: var(--font-shelby);
+  }
+
+  .bg-gradient-shelby {
+    background: var(--gradient-shelby);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-green-glow {
+    box-shadow: var(--shadow-green-glow);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--shelby-black));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--shelby-green-dark));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--shelby-green));
   }
 }

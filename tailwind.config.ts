@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				shelby: {
+					green: 'hsl(var(--shelby-green))',
+					'green-dark': 'hsl(var(--shelby-green-dark))',
+					'green-light': 'hsl(var(--shelby-green-light))',
+					black: 'hsl(var(--shelby-black))',
+					'black-light': 'hsl(var(--shelby-black-light))',
+					gold: 'hsl(var(--shelby-gold))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
